@@ -1,0 +1,48 @@
+using System;
+using System.Text;
+
+namespace Prime_Check
+{
+    class Program
+    {
+        static bool isPrime(int number)
+        {
+            if(number == 1 || number <= 0)
+            {
+                return false;
+            }
+            if(number == 2)
+            {
+                return true;
+            }
+            int count = 0;
+            for (int i = 1; i < number; i++)
+            {
+                if(number % i == 0)
+                {
+                    count++;
+                }
+            }
+            if(count > 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            if(isPrime(number))
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+        }
+    }
+}

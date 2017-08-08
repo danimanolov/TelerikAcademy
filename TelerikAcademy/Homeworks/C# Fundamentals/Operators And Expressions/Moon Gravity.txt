@@ -1,0 +1,17 @@
+using System;
+using System.Text;
+
+namespace Moon_Gravity
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            float weight = float.Parse(Console.ReadLine());
+            float moonWeight = (0.17f * weight);
+            Console.WriteLine("{0:0.000}", moonWeight);
+            
+        }
+    }
+}
