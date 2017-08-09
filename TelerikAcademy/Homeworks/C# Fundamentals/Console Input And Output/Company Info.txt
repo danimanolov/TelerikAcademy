@@ -1,0 +1,45 @@
+using System;
+using System.Text;
+
+namespace Company_Info
+{
+    class Program
+    {
+       
+        static void Main(string[] args)
+        {
+            string CompanyName = Console.ReadLine();
+            string CompanyAddress = Console.ReadLine();
+            string PhoneNumber = Console.ReadLine();
+            string FaxNumber = Console.ReadLine();
+            string Website = Console.ReadLine();
+            string ManagerFirstName = Console.ReadLine();
+            string ManagerLastName = Console.ReadLine();
+            string ManagerAge = Console.ReadLine();
+            string ManagerPhone = Console.ReadLine();
+            StringBuilder output = new StringBuilder();
+            output.AppendLine(CompanyName);
+            output.AppendFormat("Address: {0}", CompanyAddress);
+            output.AppendLine();
+            output.AppendFormat("Tel. {0}", PhoneNumber);
+            output.AppendLine();
+
+            if (String.IsNullOrEmpty(FaxNumber))
+            {
+                output.Append("Fax: (no fax)");
+            }
+            else
+            {
+                output.AppendFormat("Fax: {0}", FaxNumber);
+            }
+            output.AppendLine();
+
+            output.AppendFormat("Web site: {0}", Website);
+            output.AppendLine();
+
+            output.AppendFormat("Manager: {0} {1} (age: {2}, tel. {3})", ManagerFirstName, ManagerLastName, ManagerAge, ManagerPhone);
+            output.ToString();
+            Console.WriteLine(output);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+using System;
+using System.Text;
+
+namespace Numbers_From_One_To_N
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= number; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}

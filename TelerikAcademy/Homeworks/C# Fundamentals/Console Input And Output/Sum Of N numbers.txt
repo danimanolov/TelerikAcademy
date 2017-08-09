@@ -1,0 +1,19 @@
+using System;
+using System.Text;
+
+namespace Sum_Of_N_Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numbers = int.Parse(Console.ReadLine());
+            double sum = 0;
+            for (int i = 0; i < numbers; i++)
+            {
+                sum += double.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
